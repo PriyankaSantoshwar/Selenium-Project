@@ -1,10 +1,12 @@
 package com.saucedemo.automation.tests.products;
 
 import com.saucedemo.automation.base.DriverContext;
+import com.saucedemo.automation.base.DriverLifecycleListener;
 import com.saucedemo.automation.pages.LoginPage;
 import com.saucedemo.automation.pages.ProductsPage;
 import com.saucedemo.automation.testdata.DemoUsers;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.math.BigDecimal;
@@ -12,6 +14,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Listeners(DriverLifecycleListener.class)
 public class ProductsTests {
     @Test
     public void productsCanBeSortedByPriceAscending() {

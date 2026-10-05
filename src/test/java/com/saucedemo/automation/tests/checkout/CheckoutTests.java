@@ -1,14 +1,17 @@
 package com.saucedemo.automation.tests.checkout;
 
 import com.saucedemo.automation.base.DriverContext;
+import com.saucedemo.automation.base.DriverLifecycleListener;
 import com.saucedemo.automation.pages.CartPage;
 import com.saucedemo.automation.pages.CheckoutPage;
 import com.saucedemo.automation.pages.LoginPage;
 import com.saucedemo.automation.pages.ProductsPage;
 import com.saucedemo.automation.testdata.DemoUsers;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
+@Listeners(DriverLifecycleListener.class)
 public class CheckoutTests {
     @Test
     public void cartCanProceedToCustomerDetails() {
